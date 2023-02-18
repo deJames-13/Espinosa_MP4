@@ -1,7 +1,6 @@
 ﻿Public Class Form1
     Dim fGr, fTxRt, fNet, fBnft, fPayRt, fPlanRt, fFedTax, fAccIns, fOt, fHrs As Decimal
 
-
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
         ' VALIDATING TEXTBOX
         If Not IsNumeric(txtHrs.Text) OrElse Not IsNumeric(txtPayr.Text) Then
@@ -63,6 +62,28 @@
         txtTax.Text = fFedTax.ToString("c2")
         txtGross.Text = fGr.ToString("c2")
 
-
     End Sub
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        Dim m As Integer = MessageBox.Show("Are you sure you want to clear the form? ", "Clear Form", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If m = 7 Then
+            Return
+        End If
+        txtName.Clear()
+        mtxtEmpId.Clear()
+        txtDept.Clear()
+        txtHrs.Clear()
+        txtPayr.Clear()
+        txtGross.Clear()
+        txtTax.Clear()
+        txtBenefits.Clear()
+        txtNet.Clear()
+        rbtDefault.Checked = True
+        rbtPlan.Checked = False
+        rbtStandard.Checked = False
+        chkDent.Checked = False
+        chkMed.Checked = False
+        chkLife.Checked = False
+    End Sub
+
+
 End Class

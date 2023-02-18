@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.mainFrame = New System.Windows.Forms.Panel()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.btnCalc = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -101,6 +102,7 @@ Partial Class Form1
         '
         Me.mainFrame.BackColor = System.Drawing.Color.Azure
         Me.mainFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.mainFrame.Controls.Add(Me.btnClear)
         Me.mainFrame.Controls.Add(Me.btnCalc)
         Me.mainFrame.Controls.Add(Me.Panel1)
         Me.mainFrame.Dock = System.Windows.Forms.DockStyle.Fill
@@ -111,13 +113,26 @@ Partial Class Form1
         Me.mainFrame.Size = New System.Drawing.Size(591, 590)
         Me.mainFrame.TabIndex = 0
         '
+        'btnClear
+        '
+        Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClear.BackColor = System.Drawing.Color.Beige
+        Me.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Location = New System.Drawing.Point(452, 507)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(129, 28)
+        Me.btnClear.TabIndex = 2
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
         'btnCalc
         '
         Me.btnCalc.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCalc.BackColor = System.Drawing.Color.Beige
         Me.btnCalc.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
         Me.btnCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCalc.Location = New System.Drawing.Point(224, 520)
+        Me.btnCalc.Location = New System.Drawing.Point(317, 507)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(129, 28)
         Me.btnCalc.TabIndex = 1
@@ -849,4 +864,5 @@ Partial Class Form1
     Friend WithEvents btnCalc As Button
     Friend WithEvents mtxtEmpId As MaskedTextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnClear As Button
 End Class
