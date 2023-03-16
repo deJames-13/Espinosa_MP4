@@ -1,6 +1,7 @@
 ﻿Public Class Form1
     Dim fGr, fTxRt, fNet, fBnft, fPayRt, fPlanRt, fFedTax, fAccIns, fOt, fHrs As Decimal
 
+
     Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
         ' VALIDATING TEXTBOX
         If Not IsNumeric(txtHrs.Text) OrElse Not IsNumeric(txtPayr.Text) Then
@@ -12,7 +13,7 @@
         fPayRt = Decimal.Parse(txtPayr.Text, Globalization.NumberStyles.Currency)
 
         ' PROCESS
-        If Not (fHrs > 0 AndAlso fHrs <= 60) Then
+        If Not (fHrs > 0 And fHrs <= 60) Then
             MsgBox("Hours work not in range! (Working ours 0-60)", MsgBoxStyle.Exclamation, "Invalid Input")
             Return
         End If
